@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Nothingnesses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Make</th>
+      <th>Model</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @nothingnesses.each do |nothingness| %>
+      <tr>
+        <td><%= nothingness.make %></td>
+        <td><%= nothingness.model %></td>
+        <td><%= nothingness.year %></td>
+        <td><%= link_to 'Show', nothingness %></td>
+        <td><%= link_to 'Edit', edit_nothingness_path(nothingness) %></td>
+        <td><%= link_to 'Destroy', nothingness, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Nothingness', new_nothingness_path %>

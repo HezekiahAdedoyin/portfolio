@@ -1,0 +1,2 @@
+class Nothingness < ApplicationRecord
+end
